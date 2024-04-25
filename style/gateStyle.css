@@ -1,0 +1,238 @@
+* {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+:root {
+    --primary-color : #0369a0;
+    --secondary-color : white;
+    --primary-d-color : #004971;
+    --accent : #3c8db8;
+    --accent-transparent : #3c8db893;
+}
+html {
+    font-size: 10px;
+}
+body {
+    background-color: var(--accent);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 2rem;
+}
+/* -------------------------------------------------------- */
+h1.pageTitle {
+    width: 100vw;
+    text-align: center;
+    color: var(--secondary-color);
+    background-color: var(--primary-d-color);
+    padding: 2rem 8rem;
+    font-size: 2.8rem;
+    position: relative;
+}
+.nitIcon {
+    position: absolute;
+    top: 50%; left: 1.2rem;
+    height: 70%;
+    transform: translateY(-50%);
+}
+.switchPageBtn {
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 1000px;
+    background: var(--accent);
+    color: var(--secondary-color);
+    position: absolute;
+    top: 50%; right: 1.2rem;
+    padding: .6rem 1.2rem;
+    transform: translateY(-50%);
+}
+/* -------------------------------------------------------- */
+.form-wrap {
+    display: flex;
+    align-items: center; justify-content: center;
+    position: relative;
+}
+input[type="text"], input[type="email"] {
+    background-color: var(--secondary-color);
+    caret-color: var(--primary-color);
+    color: var(--primary-color);
+    outline: none;
+    height: 3.5rem; width: 55vw;
+    border-radius: 1000px;
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
+}
+button[type="submit"] {
+    position: absolute;
+    top: 50%; right: .5rem;
+    transform: translateY(-50%);
+    outline: none; border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    padding: .4rem 1rem;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+.icardIcon {
+    position: absolute;
+    top: 50%; left: .8rem;
+    transform: translateY(-50%);
+    outline: none; border: none;
+    height: 2.5rem;
+}
+
+.error {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 0px var(--primary-d-color);
+    font-style: italic;
+    font-weight: bold;
+}
+/* -------------------------------------------------------- */
+.table-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 70vw; max-height: 500px;
+    overflow-y: scroll;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--secondary-color);
+}
+table td, table th {
+    border: 2px solid black;
+    padding: .4rem .8rem;
+    text-align: center;
+}
+table td {
+    font-size: 1.4rem;
+}
+table tr:hover {
+    background-color: var(--accent-transparent);
+    cursor: pointer;
+}
+table thead tr:hover {
+    background-color: transparent;
+    cursor: default;
+}
+table thead {
+    position: sticky;
+    top: 0;
+}
+table th {
+    font-size: 1.6rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+th:nth-child(1) {
+    width: 10%;
+    max-width: 10%;
+    min-width: 10%;
+}
+table.studentTable th:nth-child(2) {
+    width: 20%;
+    max-width: 20%;
+    min-width: 20%;
+}
+table.studentTable th:nth-child(3) {
+    width: 40%;
+    max-width: 40%;
+    min-width: 40%;
+}
+table.studentTable th:nth-child(4) {
+    width: 10%;
+    max-width: 10%;
+    min-width: 10%;
+}
+table.studentTable th:nth-child(5) {
+    width: 20%;
+    max-width: 20%;
+    min-width: 20%;
+}
+
+/* -------------------------------------------------------- */
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    gap: 30px;
+}
+button.submit {
+    top: 50%; right: .5rem;
+    outline: none; border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    padding: .4rem 1rem;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+.addVisitorDialog {
+    position: fixed;
+    top: 50%; left: 50%;
+    width: 45vw;
+    border-radius: 20px;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: var(--primary-color);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.70);
+    text-align: center;
+    color: white;
+}
+.addVisitorDialog h2 {
+    font-size: 3.5rem;
+}
+.addVisitorDialog form {
+    display: flex; flex-direction: column;
+    gap: 20px;
+}
+.addVisitorDialog form input {
+    width: 100%;
+}
+.addVisitorDialog button {
+    position: inherit;
+    top: 0; right: 0;
+    transform: translateY(0%);
+    outline: none; border: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-d-color);
+    font-size: 1.5rem;
+    padding: .4rem 1rem;
+    border-radius: 1000px;
+    cursor: pointer;
+    width: 100px;
+    font-weight: bold;
+}
+
+.addVisitorDialog .btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    html {
+        font-size: 8px;
+    }
+    .table-wrap {
+        width: 99vw;
+    }
+    input[type="text"] {
+        width: 90vw;
+    }
+    .addVisitorDialog {
+        width: 80vw;
+    }
+}

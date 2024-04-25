@@ -1,0 +1,191 @@
+* {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+:root {
+    --primary-color : #0369a0;
+    --secondary-color : white;
+    --primary-d-color : #004971;
+    --accent : #3c8db8;
+    --accent-transparent : #3c8db893;
+}
+html {
+    font-size: 10px;
+    background-color: var(--accent);
+}
+h1.pageTitle {
+    width: 100vw;
+    text-align: center;
+    color: var(--secondary-color);
+    background-color: var(--primary-d-color);
+    padding: 2rem 8rem;
+    font-size: 2.8rem;
+    position: relative;
+}
+.nitIcon {
+    position: absolute;
+    top: 50%; left: 1.2rem;
+    height: 70%;
+    transform: translateY(-50%);
+}
+.switchPageBtn {
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 1000px;
+    background: var(--accent);
+    color: var(--secondary-color);
+    position: absolute;
+    top: 50%; right: 1.2rem;
+    padding: .6rem 1.2rem;
+    transform: translateY(-50%);
+}
+.wrap {
+    width: 100vw; 
+    display: flex; flex-direction: column;
+    background-color: var(--accent);
+    color: var(--secondary-color);
+    text-shadow: 3px 3px 0px var(--primary-color);
+    gap: 20px;
+    padding: 20px 40px;
+}
+/* #logoutBtn {
+    font-size: 20px;
+    width: 100px;
+    align-self: flex-end;
+    padding: 4px 8px;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 100px;
+    box-shadow: 2px 2px 0px var(--primary-color);
+    cursor: pointer;
+} */
+form {
+    display: flex; flex-direction: column;
+    gap: 8px;
+}
+h2 {
+    font-size: 30px;
+    margin-bottom: 4px;
+}
+input[type='text'], input[type='datetime'] {
+    width: 90%;
+    max-width: 600px;
+    font-size: 16px;
+    border: none;
+    border-radius: 100px;
+    box-shadow: 3px 3px 0px var(--primary-color);
+    padding: 4px 12px;
+}
+.submitBtn {
+    min-width: 100px; 
+    font-size: 14px;
+    padding: 4px;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 100px;
+    box-shadow: 3px 3px 0px var(--primary-color);
+    cursor: pointer;
+    font-weight: bold;
+    width: fit-content;
+}
+input::file-selector-button {
+    font-weight: bold;
+    border: none;
+    padding: 2px 8px;
+    background-color: var(--secondary-color);
+    border-radius: 100px;
+    box-shadow: 2px 2px 0px var(--primary-color);
+    cursor: pointer;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+.table-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 85vw; max-height: 400px;
+    overflow-y: scroll;
+    text-shadow: none;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--secondary-color);
+}
+table td, table th {
+    border: 2px solid black;
+    padding: .4rem .8rem;
+    text-align: center;
+}
+table td {
+    font-size: 1.4rem;
+}
+table tr:hover {
+    background-color: var(--accent-transparent);
+    cursor: pointer;
+}
+table thead tr:hover {
+    background-color: transparent;
+    cursor: default;
+}
+table thead {
+    position: sticky;
+    top: 0;
+}
+table th {
+    font-size: 1.6rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+table th:nth-child(1) {
+    width: 10%;
+    max-width: 10%;
+    min-width: 10%;
+}
+table th:nth-child(2) {
+    width: 20%;
+    max-width: 20%;
+    min-width: 20%;
+}
+table th:nth-child(3) {
+    width: 40%;
+    max-width: 40%;
+    min-width: 40%;
+}
+table th:nth-child(4) {
+    width: 10%;
+    max-width: 10%;
+    min-width: 10%;
+}
+table th:nth-child(5) {
+    width: 20%;
+    max-width: 20%;
+    min-width: 20%;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.popup {
+    display: none;
+    position: fixed;
+    color: var(--secondary-color);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-d-color);
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid white;
+}
+.popup h3 {
+    font-size: 24px;
+    margin-bottom: 14px;
+}
+/* .popup input[type="text"] {
+    display: none;
+} */
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
