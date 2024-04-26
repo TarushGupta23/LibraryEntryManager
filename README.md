@@ -19,6 +19,10 @@ Library Entry Manager is a web application designed to keep track of all student
 - **Backend**: PHP
 - **Database**: MySQL
 
+## Images
+<img src="https://github.com/TarushGupta23/storage/blob/main/Library/d.png" height="300"/> 
+<img src="https://github.com/TarushGupta23/storage/blob/main/Library/e.png" height="300"/>
+
 ## Getting Started
 
 To get started with the Library Entry Manager, follow these steps:
